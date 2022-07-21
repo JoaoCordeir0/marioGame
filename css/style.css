@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Fredoka+One&family=Press+Start+2P&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body {
+    background: rgba(0, 206, 255, 1)!important;
+}
+
+.menu {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    padding: 20px;
+}
+
+.menu h3 {
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.bycordeiro {
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.nuvem {
+    position: absolute;
+    width: 550px;
+    animation: clouds-animation 10s infinite linear;
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump_on {
+    animation: jump 500ms ease-out;
+}
+
+.game-over {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background-color: red;
+    opacity: 0.8;
+}
+
+.game-over h1 {
+    margin-top: 22%;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 38pt;
+}
+
+.game-over button {
+    background-color: transparent;
+    border: none;
+    margin-top: 30px;
+    font-family: 'Press Start 2P', cursive;
+    animation: text-animation 2s infinite linear;
+    cursor: pointer;
+}
+
+.game-over a {
+    text-decoration: none;
+    border: none;
+    margin-top: 30px;
+    font-family: 'Press Start 2P', cursive;
+    animation: text-animation 2s infinite linear;
+    cursor: pointer;
+    color: black;
+}
+
+.game-over p {
+    text-decoration: none;
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+@Keyframes jump {
+    0% {
+        bottom: 0px;
+    }
+    40% {
+        bottom: 180px;
+    }
+    50% {
+        bottom: 180px;
+    }
+    60% {
+        bottom: 180px;
+    }
+    70% {
+        bottom: 180px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@Keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes text-animation {
+    from {
+        font-size: 14pt;
+    }
+    to {
+        font-size: 12pt;
+    }
+}

@@ -1,0 +1,24 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteEngine on
+RewriteRule ^([a-z,0-9,A-Z,_-]+)$ ./$1.php
+
+SetEnv TZ America/Sao_Paulo
+
+#default index page
+DirectoryIndex "index.php index.html index.htm default.htm"
+
+#additional MIME types
+AddType text / html html
+
+#mod_rewrite on
+RewriteEngine on
+
+#Redirect wrong URLs to other web server
+RewriteCond %{REQUEST_URI} !-U
+
+ErrorDocument 404	https://webagendamento.com/error
+
+#PHP code in HTML file
+AddType fcgid-script .php .htm .html .phtml
